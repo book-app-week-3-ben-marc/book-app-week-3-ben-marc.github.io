@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
+
+  <script id="books-template" type="text/x-handlebars-template">
+    <li class="book-item">
+      <h4>Title: {{title}}</h4>
+      <p>Author: {{author}}</p>
+    </li>
+  </script>
+
+  <script id="about-template" type="text/x-handlebars-template">
+    <h3>About {{name}}</h3>
+  </script>
+
+  <script id="error-template" type="text/x-handlebars-template">
+    <p>{{status}}: {{statusText}}</p>
+  </script>
 </head>
 <body>
   <header>
@@ -17,13 +32,14 @@
   <main>
     <section class="books-view container">
       <h3>My Books</h3>
+      <div id="book-count"></div>
       <section class="book-list">
         <ul id="book-list"></ul>
       </section>
     </section>
     <section class="about-view container">
-      <h3>About Ben</h3>
-      <h3>About Marc</h3>
+      <section id="ben-info"></section>
+      <section id="marc-info"></section>
     </section>
     <section class="error-view container">
       <h3>Something went wrong</h3>
