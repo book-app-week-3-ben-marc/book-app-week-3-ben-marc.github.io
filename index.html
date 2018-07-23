@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>The Book App</title>
@@ -10,7 +11,7 @@
   <link rel="stylesheet" href="styles/layout.css">
   <link rel="stylesheet" href="styles/modules.css">
 
-  <script id="books-template" type="text/x-handlebars-template">
+  <script id="book-list-template" type="text/x-handlebars-template">
     <li class="book-item">
       <h4>Title: {{title}}</h4>
       <p>Author: {{author}}</p>
@@ -25,12 +26,13 @@
     <p>{{status}}: {{statusText}}</p>
   </script>
 </head>
+
 <body>
   <header>
     <h1>The Book App!</h1>
   </header>
   <main>
-    <section class="books-view container">
+    <section class="book-view container">
       <h3>My Books</h3>
       <div id="book-count"></div>
       <section class="book-list">
@@ -53,4 +55,5 @@
   <script src="scripts/views/book-view.js"></script>
   <script src="scripts/views/error-view.js"></script>
 </body>
+
 </html>
