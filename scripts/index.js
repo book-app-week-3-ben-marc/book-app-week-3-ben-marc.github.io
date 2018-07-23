@@ -14,6 +14,23 @@ var app = app || {};
 
   console.log(module.ENVIRONMENT);
 
+  module.showOnly = (selector) => {
+    $('.container').hide();
+    $(selector).show();
+  };
+
+  const templateCache = {};
+  module.render = (templateId, dataToRender) => {
+    let template = templateCache[templateId];
+
+    if(!template) {
+      console.log(`Compiling template ${templateId}`);
+      template = Handlebars.compile(document.getElementById('templateId').innerText);
+    }
+
+    return template(dataToRender);
+  };
+
   $.getJSON(module.ENVIRONMENT.apiUrl + '/tasks')
     .then(result => console.log(result))
     .catch(err => console.error(err));
