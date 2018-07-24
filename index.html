@@ -22,6 +22,18 @@
     </li>
   </script>
 
+  <script id="book-item-template" type="text/x-handlebars-template">
+      <div>
+        <h3>{{{title}}}</h3>
+        <div class="author-isbn">
+          <h5>{{{author}}}</h5>
+          <h5>isbn: {{{isbn}}}</h5>
+        </div>
+        <img src="{{image_url}}" alt="{{title}}">
+        <p>{{{description}}}</p>
+      </div>
+  </script>
+
   <script id="about-template" type="text/x-handlebars-template">
     <h3>About {{name}}</h3>
   </script>
@@ -42,6 +54,10 @@
       <section class="book-list">
         <ul id="book-list"></ul>
       </section>
+    </section>
+    <section class="book-detail container">
+      <h3>Book Detail</h3>
+      <div id="book-detail"></div>
     </section>
     <section class="about-view container">
       <section id="ben-info"></section>
