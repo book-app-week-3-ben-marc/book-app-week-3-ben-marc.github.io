@@ -25,7 +25,7 @@ var app = app || {};
   }
 
   Book.fetchAll = callback =>
-    $.get(`${app.ENVIRONMENT.apiUrl}/books`);
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
       .then(loadAll)
       .then(callback)
       .catch(errorCallback);

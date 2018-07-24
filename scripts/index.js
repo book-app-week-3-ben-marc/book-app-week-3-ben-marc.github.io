@@ -25,13 +25,13 @@ var app = app || {};
 
     if(!template) {
       console.log(`Compiling template ${templateId}`);
-      template = Handlebars.compile(document.getElementById('templateId').innerText);
+      template = Handlebars.compile(document.getElementById(templateId).innerText);
     }
 
     return template(dataToRender);
   };
 
-  $.getJSON(module.ENVIRONMENT.apiUrl + '/tasks')
+  $.getJSON(module.ENVIRONMENT.apiUrl + '/api/v1/books')
     .then(result => console.log(result))
     .catch(err => console.error(err));
 })(app);
