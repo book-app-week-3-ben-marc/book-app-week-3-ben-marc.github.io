@@ -1,0 +1,36 @@
+/*font-family: 'Didact Gothic', sans-serif;
+color scheme 
+#031926 MAASTRICHT BLUE
+#468189 Teal Blue
+#77ACA2 green sheen
+#9DBEBB cambridge blue
+#F7ECE1 linen
+
+*/
+
+header {
+  background-color: #031926;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #F7ECE1;
+  height: 100px;
+  padding-left: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+main {
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-bottom: 90px;
+  background-color: #F7ECE1;
+  font-family: 'Didact Gothic', sans-serif;
+  color: #031926;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #9DBEBB;
+  height: 170px;
+}
