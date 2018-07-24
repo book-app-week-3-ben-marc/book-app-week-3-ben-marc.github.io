@@ -5,7 +5,6 @@ color scheme
 #77ACA2 green sheen
 #9DBEBB cambridge blue
 #F7ECE1 linen
-
 */
 
 header {
@@ -17,6 +16,7 @@ header {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 main {
   padding-top: 30px;
   padding-left: 30px;
@@ -25,6 +25,7 @@ main {
   font-family: 'Didact Gothic', sans-serif;
   color: #031926;
 }
+
 * {
   margin: 0;
   padding: 0;
