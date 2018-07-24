@@ -13,5 +13,11 @@ var app = app || {};
     app.Book.getAll().forEach(book => $('#book-list').append(book.toHtml()));
   }
 
+  bookView.initDetailPage = book => {
+    app.showOnly('.book-detail');
+
+    $('#book-detail').empty().append(book.detailToHtml());
+  };
+
   module.bookView = bookView;
 })(app)

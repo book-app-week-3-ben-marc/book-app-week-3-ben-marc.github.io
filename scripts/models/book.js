@@ -16,6 +16,10 @@ var app = app || {};
     return app.render('book-list-template', this);
   }
 
+  Book.prototype.detailToHtml = function() {
+    return app.render('book-item-template', this);
+  }
+
   const all = [];
   Book.getAll = () => all;
 
@@ -28,6 +32,11 @@ var app = app || {};
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books`)
       .then(loadAll)
       .then(callback)
+      .catch(errorCallback);
+
+    Book.fetchOne = (bookId, callback) =>
+    $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
+      .then(bookData => callback(new Book(bookData)))
       .catch(errorCallback);
 
   module.Book = Book;
