@@ -8,12 +8,9 @@ var app = app || {};
   bookView.initIndexPage = () => {
     app.showOnly('.book-view');
 
-    app.Book.all.forEach(book => $('#book-list').append(book.toHtml()));
+    $('#book-list').empty();
+    app.Book.getAll().forEach(book => $('#book-list').append(book.toHtml()));
   }
 
   module.bookView = bookView;
 })(app)
-
-$(function() {
-  app.Book.fetchAll(app.bookView.initIndexPage);
-})
