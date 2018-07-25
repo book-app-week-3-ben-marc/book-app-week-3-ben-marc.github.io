@@ -20,6 +20,10 @@ var app = app || {};
     return app.render('book-item-template', this);
   }
 
+  Book.prototype.formToHtml = function() {
+    return app.render('book-form-template', this);
+  }
+
   const all = [];
   Book.getAll = () => all;
 

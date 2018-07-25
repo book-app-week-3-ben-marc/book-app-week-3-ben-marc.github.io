@@ -33,7 +33,7 @@
   margin: 0;
 }
 
-.book-item div .button {
+.button {
   background-color: white;
   color: #333;
   text-decoration: none;
@@ -43,10 +43,13 @@
   width: 200px;
   text-align: center;
   border-radius: 10px;
+}
+
+.book-item div .button {
   float: right;
 }
 
-.book-item div .button:hover {
+.button:hover {
   background-color: #ccc;
 }
 
@@ -112,7 +115,8 @@ header {
 
 
 /* Add book module */
-.book-add input, .book-add textarea {
+.book-add input, .book-add textarea, 
+.book-update input, .book-update textarea {
   display: block;
   width: 100%;
   font-size: 1.5em;

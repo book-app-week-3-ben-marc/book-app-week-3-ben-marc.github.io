@@ -15,11 +15,10 @@ var app = app || {};
 
   bookView.initDetailPage = book => {
     app.showOnly('.book-detail');
-
     $('#book-detail').empty().append(book.detailToHtml());
   };
 
-  bookView.initFormPage = () => {
+  bookView.initFormPage = book => {
     app.showOnly('.book-add');
   };
 
@@ -34,6 +33,11 @@ var app = app || {};
     }
     app.Book.createBook(book, () => page('/'));
   });
+
+  bookView.initUpdatePage = book => {
+    app.showOnly('.book-update');
+    $('#book-update').empty().append(book.formToHtml());
+  };
 
   module.bookView = bookView;
 })(app)

@@ -31,7 +31,22 @@
       </div>
       <img src="{{image_url}}" alt="{{title}}">
       <p>{{{description}}}</p>
+      <p>
+        <a href="/books/{{book_id}}/update" class="button">Update</a>
+      </p>
     </div>
+  </script>
+
+
+  <script id="book-form-template" type="text/x-handlebars-template">
+    <form id="update-form">
+      <input type="text" name="title" placeholder="Book Title" value="{{title}}" required>
+      <input type="text" name="author" placeholder="Author" value="{{author}}" required>
+      <input type="text" name="isbn" placeholder="ISBN" value="{{isbn}}" required>
+      <input type="text" name="image_url" placeholder="Image URL" value="{{image_url}}" required>
+      <textarea name="description" placeholder="Book Description" rows="5">{{description}}</textarea>
+      <input type="submit" value="Update this book">
+    </form>
   </script>
 
   <script id="about-template" type="text/x-handlebars-template">
@@ -77,6 +92,10 @@
         <textarea name="description" placeholder="Book Description" rows="5"></textarea>
         <input type="submit" value="Add this book">
       </form>
+    </section>
+    <section class="book-update container">
+      <h3>Book Update</h3>
+      <div id="book-update"></div>
     </section>
     <section class="about-view container">
       <section id="ben-info"></section>
