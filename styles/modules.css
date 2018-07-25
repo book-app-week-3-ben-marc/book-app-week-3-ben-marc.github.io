@@ -50,43 +50,53 @@
   background-color: #ccc;
 }
 
+/* Navigation module */
+header {
+  position: relative;
+}
 .nav-ul {
   display: none;
+  background-color: #031926;
+  position: absolute;
+  z-index: 1;
+}
+
+.nav-ul li {
+  
 }
 
 .hamburger {
   display: block;
   float: right;
   color: #F7ECE1;
-  font-size: 2em;
-  margin-top: -100px;
-  margin-right: 10px;
-  padding: 50px;
+  font-size: 2.5em;
+  margin-top: -70px;
+  padding-right: 10px;
+  height: 70px;
+  padding-left: 50px;
 }
 
-.nav-ul li {
+.nav-ul li a {
   display: block;
-  background-color: #031926;
-}
-
-.view-book, .add-book {
+  width: 100%;
   color: #F7ECE1;
   text-decoration: none;
-  margin-left: 20px;
+  font-size: 1.5rem;
+  padding: 10px 20px ;
+  font-family: 'Didact Gothic', sans-serif;
+  background-color:#9DBEBB;
+}
+
+.nav-ul li a:hover {
+  background-color: #468189;
 }
 
  nav:hover .nav-ul {
   display: block;
+  top: 100px;
+  left: 0;
+  width: 100%;
 } 
-li {
-  font-size: 1.5rem;
-  letter-spacing: normal;
-  list-style-type: none;
-  display: inline-block;
-  padding: 1%;
-  color: #F7ECE1;
-  font-family: 'Didact Gothic', sans-serif;
-}
 
 .icon-github1:before {
   font-family:'icomoon';
