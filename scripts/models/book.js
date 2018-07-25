@@ -27,7 +27,9 @@ var app = app || {};
 
   const loadAll = rows => {
     all.length = 0; // empty the array before we re-load
+    // console.log('before load: ' + all);
     rows.sort(compareBy('title')).forEach(book => all.push(new Book(book)));
+    // console.log('after load: ' + all);
   }
 
   Book.fetchAll = callback =>
