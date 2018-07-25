@@ -26,13 +26,13 @@ var app = app || {};
   $('#add-form').on('submit', function(event) {
     event.preventDefault();
     let book = {
-      title: 'this.title.value',
-      author: 'this.author.value',
-      isbn: 'this.isbn.value',
-      image_url: 'this.image_url.value',
-      description: 'this.description.value'
+      title: this.title.value,
+      author: this.author.value,
+      isbn: this.isbn.value,
+      image_url: this.image_url.value,
+      description: this.description.value
     }
-    app.Book.createBook(book);
+    app.Book.createBook(book, () => page('/'));
   });
 
   module.bookView = bookView;
