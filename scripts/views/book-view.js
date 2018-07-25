@@ -37,6 +37,19 @@ var app = app || {};
   bookView.initUpdatePage = book => {
     app.showOnly('.book-update');
     $('#book-update').empty().append(book.formToHtml());
+    $('#update-form').on('submit', function(event) {
+      event.preventDefault();
+      console.log('hello');
+      let book = {
+        book_id: this.book_id.value,
+        title: this.title.value,
+        author: this.author.value,
+        isbn: this.isbn.value,
+        image_url: this.image_url.value,
+        description: this.description.value
+      }
+      app.Book.updateBook(book, () => page('/'));
+    });
   };
 
   module.bookView = bookView;
