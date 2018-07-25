@@ -59,8 +59,9 @@
   float: right;
   color: #F7ECE1;
   font-size: 2em;
-  margin: -65px;
+  margin-top: -100px;
   margin-right: 10px;
+  padding: 50px;
 }
 
 .nav-ul li {
