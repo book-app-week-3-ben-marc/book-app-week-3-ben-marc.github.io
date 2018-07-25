@@ -37,6 +37,18 @@
     </div>
   </script>
 
+
+  <script id="book-form-template" type="text/x-handlebars-template">
+    <form id="update-form">
+      <input type="text" name="title" placeholder="Book Title" value="{{title}}" required>
+      <input type="text" name="author" placeholder="Author" value="{{author}}" required>
+      <input type="text" name="isbn" placeholder="ISBN" value="{{isbn}}" required>
+      <input type="text" name="image_url" placeholder="Image URL" value="{{image_url}}" required>
+      <textarea name="description" placeholder="Book Description" rows="5">{{description}}</textarea>
+      <input type="submit" value="Update this book">
+    </form>
+  </script>
+
   <script id="about-template" type="text/x-handlebars-template">
     <h3>About {{name}}</h3>
   </script>
@@ -44,18 +56,6 @@
   <script id="error-template" type="text/x-handlebars-template">
     <p>{{status}}: {{statusText}}</p>
   </script>
-
-  <script id="book-form-template" type="text/x-handlebars-template">
-    <form id="add-form">
-      <input type="text" name="title" placeholder="Book Title" value="{{title}}" required>
-      <input type="text" name="author" placeholder="Author" value="{{author}}" required>
-      <input type="text" name="isbn" placeholder="ISBN" value="{{isbn}}" required>
-      <input type="text" name="image_url" placeholder="Image URL" value="{{image_url}}" required>
-      <textarea name="description" placeholder="Book Description" rows="5" value="{{description}}"></textarea>
-      <input type="submit" value="Add this book">
-    </form>
-  </script>
-
 </head>
 
 <body>
@@ -84,7 +84,18 @@
     </section>
     <section class="book-add container">
       <h3>Add a new book</h3>
-      <div id="book-form"></div>
+      <form id="add-form">
+        <input type="text" name="title" placeholder="Book Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="text" name="isbn" placeholder="ISBN" required>
+        <input type="text" name="image_url" placeholder="Image URL" required>
+        <textarea name="description" placeholder="Book Description" rows="5"></textarea>
+        <input type="submit" value="Add this book">
+      </form>
+    </section>
+    <section class="book-update container">
+      <h3>Book Update</h3>
+      <div id="book-update"></div>
     </section>
     <section class="about-view container">
       <section id="ben-info"></section>

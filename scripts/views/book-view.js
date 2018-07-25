@@ -20,7 +20,6 @@ var app = app || {};
 
   bookView.initFormPage = book => {
     app.showOnly('.book-add');
-    $('#book-form').empty().append(book.formToHtml());
   };
 
   $('#add-form').on('submit', function(event) {
@@ -36,7 +35,8 @@ var app = app || {};
   });
 
   bookView.initUpdatePage = book => {
-    app.showOnly('.book-add');
+    app.showOnly('.book-update');
+    $('#book-update').empty().append(book.formToHtml());
   };
 
   module.bookView = bookView;
