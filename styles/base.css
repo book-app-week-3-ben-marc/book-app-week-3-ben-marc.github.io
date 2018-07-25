@@ -29,8 +29,18 @@ header {
   color: #F7ECE1;
   height: 100px;
   padding-left: 30px;
-  padding-top: 8px;
-  
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  padding: 20px;
+  display: block;
+}
+
+header a {
+  color: #F7ECE1;
+  text-decoration: none;
 }
 
 main {

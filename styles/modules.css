@@ -69,11 +69,12 @@ header {
   display: block;
   float: right;
   color: #F7ECE1;
-  font-size: 2.5em;
+  font-size: 40px;
   margin-top: -70px;
   padding-right: 10px;
-  height: 70px;
+  height: 78px;
   padding-left: 50px;
+  /* background-color: yellow; */
 }
 
 .nav-ul li a {
