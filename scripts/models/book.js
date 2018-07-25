@@ -26,6 +26,7 @@ var app = app || {};
   const compareBy = (key) => (a, b) => a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0;
 
   const loadAll = rows => {
+    all.length = 0; // empty the array before we re-load
     rows.sort(compareBy('title')).forEach(book => all.push(new Book(book)));
   }
 
