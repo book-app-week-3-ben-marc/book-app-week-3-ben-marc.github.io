@@ -43,9 +43,9 @@ var app = app || {};
       .then(bookData => callback(new Book(bookData)))
       .catch(errorCallback);
 
-  Book.createBook = book =>
+  Book.createBook = (book, callback) =>
     $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books/add`, book)
-      .then(() => page('/'))
+      .then(callback)
       .catch(errorCallback);
 
   module.Book = Book;
