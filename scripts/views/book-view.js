@@ -15,12 +15,12 @@ var app = app || {};
 
   bookView.initDetailPage = book => {
     app.showOnly('.book-detail');
-
     $('#book-detail').empty().append(book.detailToHtml());
   };
 
-  bookView.initFormPage = () => {
+  bookView.initFormPage = book => {
     app.showOnly('.book-add');
+    $('#book-form').empty().append(book.formToHtml());
   };
 
   $('#add-form').on('submit', function(event) {
@@ -34,6 +34,10 @@ var app = app || {};
     }
     app.Book.createBook(book, () => page('/'));
   });
+
+  bookView.initUpdatePage = book => {
+    app.showOnly('.book-add');
+  };
 
   module.bookView = bookView;
 })(app)

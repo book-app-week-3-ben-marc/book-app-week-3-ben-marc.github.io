@@ -10,5 +10,9 @@ page('/books/:id', ctx => {
   app.Book.fetchOne(ctx.params.id, app.bookView.initDetailPage);
 });
 
+page('/books/:id/update', ctx => {
+  app.Book.fetchOne(ctx.params.id, app.bookView.initUpdatePage);
+});
+
 // equivalent to app.listen(...), i.e. we're done setting up routes
 page();
