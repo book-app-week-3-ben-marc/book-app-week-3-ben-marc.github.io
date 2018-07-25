@@ -5,33 +5,33 @@
   <meta charset="UTF-8">
   <title>The Book App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="vendor/styles/normalize.css">
-  <link rel="stylesheet" href="vendor/styles/icons.css">
+  <link rel="stylesheet" href="/vendor/styles/normalize.css">
+  <link rel="stylesheet" href="/vendor/styles/icons.css">
   <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/layout.css">
-  <link rel="stylesheet" href="styles/modules.css">
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/modules.css">
 
   <script id="book-list-template" type="text/x-handlebars-template">
     <li class="book-item" style="background-image: url({{image_url}}); background-repeat: no-repeat; background-size: cover;">
       <div>
         <h4>{{{title}}}</h4>
         <h5>{{{author}}}</h5>
-        <a href="books/{{book_id}}" class="button">View Details</a>
+        <a href="/books/{{book_id}}" class="button">View Details</a>
       </div>
     </li>
   </script>
 
   <script id="book-item-template" type="text/x-handlebars-template">
-      <div>
-        <h3>{{{title}}}</h3>
-        <div class="author-isbn">
-          <h5>{{{author}}}</h5>
-          <h5>isbn: {{{isbn}}}</h5>
-        </div>
-        <img src="{{image_url}}" alt="{{title}}">
-        <p>{{{description}}}</p>
+    <div>
+      <h3>{{{title}}}</h3>
+      <div class="author-isbn">
+        <h5>{{{author}}}</h5>
+        <h5>isbn: {{{isbn}}}</h5>
       </div>
+      <img src="{{image_url}}" alt="{{title}}">
+      <p>{{{description}}}</p>
+    </div>
   </script>
 
   <script id="about-template" type="text/x-handlebars-template">
@@ -59,6 +59,17 @@
       <h3>Book Detail</h3>
       <div id="book-detail"></div>
     </section>
+    <section class="book-add container">
+      <h3>Add a new book</h3>
+      <form id="add-form">
+        <input type="text" name="title" placeholder="Book Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="text" name="isbn" placeholder="ISBN" required>
+        <input type="text" name="image_url" placeholder="Image URL" required>
+        <textarea name="description"></textarea>
+        <input type="submit" value="Add this book">
+      </form>
+    </section>
     <section class="about-view container">
       <section id="ben-info"></section>
       <section id="marc-info"></section>
@@ -73,12 +84,12 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
-  <script src="vendor/scripts/page.js"></script>
-  <script src="scripts/index.js"></script>
-  <script src="scripts/models/book.js"></script>
-  <script src="scripts/views/book-view.js"></script>
-  <script src="scripts/views/error-view.js"></script>
-  <script src="scripts/controller/routes.js"></script>
+  <script src="/vendor/scripts/page.js"></script>
+  <script src="/scripts/index.js"></script>
+  <script src="/scripts/models/book.js"></script>
+  <script src="/scripts/views/book-view.js"></script>
+  <script src="/scripts/views/error-view.js"></script>
+  <script src="/scripts/controller/routes.js"></script>
 </body>
 
 </html>
