@@ -49,3 +49,50 @@
 .book-item div .button:hover {
   background-color: #ccc;
 }
+
+.nav-ul {
+  display: none;
+}
+
+.hamburger {
+  display: block;
+  float: right;
+  color: #F7ECE1;
+  font-size: 2em;
+  margin: -65px;
+  margin-right: 10px;
+}
+
+.nav-ul li {
+  display: block;
+  background-color: #031926;
+}
+
+.view-book, .add-book {
+  color: #F7ECE1;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+ nav:hover .nav-ul {
+  display: block;
+} 
+li {
+  font-size: 1.5rem;
+  letter-spacing: normal;
+  list-style-type: none;
+  display: inline-block;
+  padding: 1%;
+  color: #F7ECE1;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+.icon-github1:before {
+  font-family:'icomoon';
+  content: "\eab0";
+}
+
+.icon-linkedin2:before {
+  font-family:'icomoon';
+  content: "\eac9";
+}
