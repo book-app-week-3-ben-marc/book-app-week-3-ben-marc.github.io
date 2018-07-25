@@ -52,5 +52,16 @@ var app = app || {};
       .then(callback)
       .catch(errorCallback);
 
+  Book.updateBook = (book, callback) => {
+    console.log('hi');
+    $.ajax({
+      method: 'put',
+      url: `${app.ENVIRONMENT.apiUrl}/api/v1/books/${book.book_id}`,
+      data: book
+    })
+      .then(callback)
+      .catch(errorCallback);
+  }
+      
   module.Book = Book;
 })(app)
