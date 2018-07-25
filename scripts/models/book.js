@@ -24,6 +24,7 @@ var app = app || {};
   Book.getAll = () => all;
 
   const compareBy = (key) => (a, b) => a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0;
+
   const loadAll = rows => {
     rows.sort(compareBy('title')).forEach(book => all.push(new Book(book)));
   }
@@ -34,9 +35,14 @@ var app = app || {};
       .then(callback)
       .catch(errorCallback);
 
-    Book.fetchOne = (bookId, callback) =>
+  Book.fetchOne = (bookId, callback) =>
     $.get(`${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`)
       .then(bookData => callback(new Book(bookData)))
+      .catch(errorCallback);
+
+  Book.createBook = book =>
+    $.post(`${app.ENVIRONMENT.apiUrl}/api/v1/books/add`, book)
+      .then(() => page('/'))
       .catch(errorCallback);
 
   module.Book = Book;
