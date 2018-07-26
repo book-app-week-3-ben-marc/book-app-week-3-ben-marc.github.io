@@ -64,10 +64,6 @@ header {
   z-index: 1;
 }
 
-.nav-ul li {
-  
-}
-
 .hamburger {
   display: block;
   float: right;
@@ -116,7 +112,8 @@ header {
 
 /* Add book module */
 .book-add input, .book-add textarea, 
-.book-update input, .book-update textarea {
+.book-update input, .book-update textarea 
+.book-update, .book-update delete{
   display: block;
   width: 100%;
   font-size: 1.5em;

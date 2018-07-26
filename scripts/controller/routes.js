@@ -14,5 +14,10 @@ page('/books/:id', ctx => {
   app.Book.fetchOne(ctx.params.id, app.bookView.initDetailPage);
 });
 
+page('/boks/:id/delete', ctx => {
+  let redirectHomeOnDelete = () => page('/');
+  app.Books.deleteOne(ctx.params.id, redirectHomeOnDelete);
+});
+
 // equivalent to app.listen(...), i.e. we're done setting up routes
 page();
