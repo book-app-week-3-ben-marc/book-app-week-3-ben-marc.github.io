@@ -53,50 +53,6 @@
   background-color: #ccc;
 }
 
-/* Navigation module */
-header {
-  position: relative;
-}
-.nav-ul {
-  display: none;
-  background-color: #031926;
-  position: absolute;
-  z-index: 1;
-}
-
-.hamburger {
-  display: block;
-  float: right;
-  color: #F7ECE1;
-  font-size: 40px;
-  margin-top: -70px;
-  padding-right: 10px;
-  height: 78px;
-  padding-left: 50px;
-  /* background-color: yellow; */
-}
-
-.nav-ul li a {
-  display: block;
-  width: 100%;
-  color: #F7ECE1;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 10px 20px ;
-  font-family: 'Didact Gothic', sans-serif;
-  background-color:#9DBEBB;
-}
-
-.nav-ul li a:hover {
-  background-color: #468189;
-}
-
- nav:hover .nav-ul {
-  display: block;
-  top: 100px;
-  left: 0;
-  width: 100%;
-} 
 
 .icon-github1:before {
   font-family:'icomoon';
