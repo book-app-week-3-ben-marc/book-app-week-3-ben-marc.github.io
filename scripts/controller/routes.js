@@ -14,7 +14,7 @@ page('/books/:id', ctx => {
   app.Book.fetchOne(ctx.params.id, app.bookView.initDetailPage);
 });
 
-page('/boks/:id/delete', ctx => {
+page('/books/:id/delete', ctx => {
   let redirectHomeOnDelete = () => page('/');
   app.Books.deleteOne(ctx.params.id, redirectHomeOnDelete);
 });
