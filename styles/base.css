@@ -24,6 +24,10 @@ html {
   padding: 0;
 }
 
+h3{
+  margin-bottom: 10px;
+  font-size: 20px;
+}
 
 header {
   background-color: #031926;
@@ -46,9 +50,7 @@ header a {
 }
 
 main {
-  padding-top: 30px;
-  padding-left: 30px;
-  padding-bottom: 90px;
+  padding: 30px 30px 90px 50px;
   background-color: #F7ECE1;
   font-family: 'Didact Gothic', sans-serif;
   color: #031926;

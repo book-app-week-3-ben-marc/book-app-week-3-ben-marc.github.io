@@ -61,15 +61,15 @@ var app = app || {};
     })
       .then(callback)
       .catch(errorCallback);
-  
-    Book.deleteOne = (bookId, callback) =>
-      $.ajax({
-        method: 'delete',
-        url: `${app.ENVIRONMENT.apiUrl}/api/v1/books/${book.book_id}`,
-    })
-    .then(callback)
-    .catch(errorCallback);
   }
 
+    Book.deleteOne = (bookId, callback) => {
+        $.ajax({
+          method: 'delete',
+          url: `${app.ENVIRONMENT.apiUrl}/api/v1/books/${bookId}`,
+      })
+      .then(callback)
+      .catch(errorCallback);
+    }
   module.Book = Book;
 })(app)

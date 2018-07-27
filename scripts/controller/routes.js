@@ -16,7 +16,7 @@ page('/books/:id', ctx => {
 
 page('/books/:id/delete', ctx => {
   let redirectHomeOnDelete = () => page('/');
-  app.Books.deleteOne(ctx.params.id, redirectHomeOnDelete);
+  app.Book.deleteOne(ctx.params.id, redirectHomeOnDelete);
 });
 
 // equivalent to app.listen(...), i.e. we're done setting up routes
